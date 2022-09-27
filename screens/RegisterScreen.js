@@ -6,7 +6,7 @@ import { Pressable } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 
-function RegisterScreen(){
+function RegisterScreen({navigation}){
     return (
         <Box flex={1} bg={Colors.black} >
             <Image flex={1} alt="logo" resizeMode="cover"
@@ -37,8 +37,9 @@ function RegisterScreen(){
                      w="70%" color={Colors.main} borderBottomColor={Colors.underline}></Input>
                 </VStack>
                 <Button _pressed={{bg:Colors.main,}} my={30} w="40%" rounded={50} bg={Colors.main} 
+                    onPress={() => navigation.navigate("Bottom")}
                     >Sign Up</Button>
-                    <Pressable mt={4} >
+                    <Pressable mt={4} onPress={() => navigation.navigate("Login")}>
                         <Text color={Colors.deepestGray} >Login</Text>
                     </Pressable>
             </Box>

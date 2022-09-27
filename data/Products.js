@@ -29,7 +29,7 @@ const products = [
         description:
         "lorem sxxxxxxx",
         price: 90,
-        countInStock: 3,
+        countInStock: 0,
         rating: 4,
         numReviews:4,
     },
